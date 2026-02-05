@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+
+/* 1. 基本設定 */
+body {
+    /* 日本語フォントをきれいに見せる設定 */
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    background-color: #f8f8f8; /* ベース背景色 */
+}
+
+/* 2. 入力フォームの自動補完時の色変更を防ぐ（Chrome対策） */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: #333;
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* 3. カスタムスクロールバー（お好みで） */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+    background: #ccc; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #b1284b; /* スクールカラー */
+}
+
+/* これ以外のデザイン（ボタンの色、配置、余白など）は
+   すべて HTML側の class="..." (Tailwind) で制御します。
+*/
